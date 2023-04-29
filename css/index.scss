@@ -53,6 +53,7 @@ body{
             color: #FFFFFF;
             text-decoration: none;
             background: linear-gradient(0.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
             border-radius: 25px;
             font-size: 16px;
             padding: 15px;
@@ -63,7 +64,7 @@ body{
     background-color: #FFFFFF;
     padding: 30px 15px;
     h2{
-        margin: 15px 0;
+        margin: 15px 0 28px 4px;
     }
     &__cards{
         display: flex;
@@ -74,14 +75,15 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        position: relative;
         background-color: #F6F6F6;
         border-radius: 20px;
         padding: 25px;
-        margin: 0 0 10px 8px;
+        margin: 0 0 21px 13px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             &__number{
                 position: absolute;
-                left: 7%;
+                left: -4%;
                 background-color: #9356DC;
                 border-radius: 50%;
                 padding: 3px 8px;
@@ -98,7 +100,91 @@ body{
 .restaurants{
     padding: 30px 15px;
     h2{
-        margin: 15px 0;
+        margin: 10px 0 20px 4px;
     }
-   
+   &__cards{
+        &__style{
+            border-radius: 15px;
+            background-color: #FFFFFF;
+            margin-bottom: 20px;
+            position: relative;
+            & a{
+                width: 100%;
+                height: 100%;
+                color: transparent;
+                position: absolute;
+                z-index: 1;
+            }
+            &__new{
+                position: absolute;
+                right: 5%;
+                top: 5%;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                background: #99E2D0;
+                color: #008766;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                border-radius: 2px;
+                padding: 6px 8px;
+            }
+            & img{
+                width: 100%;
+                height: 165px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                object-fit: cover;
+            }
+            &__content{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 12px;
+                &__txt{
+                    & h3{
+                        margin-bottom: 4px;
+                    }
+                    & p{
+                        margin-bottom: 4px;
+                    }
+                }
+                    &__rating{
+                        display: flex;
+                        align-items:start;
+                        padding: 6px 11px 0 0;
+                        z-index: 2;
+                    }
+            }
+        }
+   }
+}
+
+.footer{
+    padding: 22px;
+    background-color: #353535;
+    color: #FFFFFF;
+    &__title{
+        font-family: 'Shrikhand', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    &__sec{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        &__link{
+            margin-bottom: 9px;
+            & a{
+                text-decoration: none;
+                color: #FFFFFF;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px; 
+                & svg{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
 }
