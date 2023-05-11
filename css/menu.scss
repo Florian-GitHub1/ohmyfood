@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background: rgb(210 210 210 / 22%);;
-}
 
 .header{
     background-color: #FFFFFF;
@@ -15,7 +11,10 @@ body{
     grid-template-columns: repeat(3, 3fr);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     &__title{
+        text-align: center;
         font-family: 'Shrikhand', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
         padding: 10px 0 8px;
     }
     &__arrow{
@@ -25,21 +24,130 @@ body{
     }
 }
 
-.homepage__header{
-    &__menu{
-        & img{
+.restaurant{
+    &__img{
         width: 100%;
-        height: 100%;
-        }
+        height: 300px;
+        object-fit: cover;
     }
-
 }
 
+.carte{
+    position: relative;
+    background-color: #F6F6F6;
+    max-width: 1044px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    &__title{
+        display: flex;
+        position: absolute;
+        background-color: #F6F6F6;
+        border-radius: 40px 40px 0px 0px;
+        top: -49px;
+        width: 100%;
+        align-items: center;
+        padding: 42px 16px 0px 10px; 
+            & h2{
+                font-family: 'Shrikhand', sans-serif;
+                font-weight: 400;
+                font-size: 27px;
+                margin-left: 2px;
+            }
+            & svg{
+                margin: 0px 0px 7px 5%;
+            }
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+            & button{
+                border: none;
+                font-weight: 500;
+                color: #FFFFFF;
+                text-decoration: none;
+                background: linear-gradient(0.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+                border-radius: 25px;
+                font-size: 16px;
+                padding: 15px 45px 15px 45px;
+                margin: 40px;
+            }
+    }
+}
 
+.menu{
+    padding: 30px 8px 0px 8px;
+    &__title{
+        padding-bottom: 3px;
+        border-bottom: 3px solid #99E2D0;
+        width: 30px;
+        text-transform: uppercase;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    &__name{
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 10px;
+        box-shadow: 0px 1px 16px rgb(54 54 54 / 26%);
+        margin: 14px 0 0px 0px;
+            &__plat{
+                display: flex;
+                flex-direction: column;
+                width: calc(85%);
+                    & h2{
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px; 
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: calc(100%);
+                    }
+                    & span{
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 15.0431px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: calc(100%);
+                    }
+            }
+            &__price{
+                display: flex;
+                align-items: flex-end;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15.0431px;
+            }
+    }
+}
 
+.menu--margin{
+    margin-top: 35px;
+}
 
-
-
+.homepage__header{
+        &__btn a{
+            font-weight: 500;
+            color: #FFFFFF;
+            text-decoration: none;
+            background: linear-gradient(0.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+            font-size: 16px;
+            padding: 15px;
+        }
+}
 
 .footer{
     padding: 22px;
@@ -69,5 +177,46 @@ body{
                 }
             }
         }
+    }
+}
+
+
+
+@media screen and (min-width: 767.8px){
+    .carte{
+        justify-items: center;
+    }
+    .menu{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        width: 65%;
+    }
+    .footer{
+        &__title{
+            margin: 0;
+        }
+        &__sec{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            &__link{
+                margin: 9px;
+                & a{
+                    & svg{
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 425px){
+    .carte{
+            &__title{
+                justify-content: center;
+            }
     }
 }

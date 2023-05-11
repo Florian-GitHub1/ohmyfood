@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background: rgba(210, 210, 210, 0.22);
-}
-
 .header {
   background-color: #FFFFFF;
   display: grid;
@@ -16,7 +11,10 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 .header__title {
+  text-align: center;
   font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
   padding: 10px 0 8px;
 }
 .header__arrow {
@@ -25,9 +23,126 @@ body {
   padding-left: 25px;
 }
 
-.homepage__header__menu img {
+.restaurant__img {
   width: 100%;
-  height: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carte {
+  position: relative;
+  background-color: #F6F6F6;
+  max-width: 1044px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.carte__title {
+  display: flex;
+  position: absolute;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+  top: -49px;
+  width: 100%;
+  align-items: center;
+  padding: 42px 16px 0px 10px;
+}
+.carte__title h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 27px;
+  margin-left: 2px;
+}
+.carte__title svg {
+  margin: 0px 0px 7px 5%;
+}
+.carte__button {
+  display: flex;
+  justify-content: center;
+}
+.carte__button button {
+  border: none;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: linear-gradient(0.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 15px 45px 15px 45px;
+  margin: 40px;
+}
+
+.menu {
+  padding: 30px 8px 0px 8px;
+}
+.menu__title {
+  padding-bottom: 3px;
+  border-bottom: 3px solid #99E2D0;
+  width: 30px;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+}
+.menu__name {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 1px 16px rgba(54, 54, 54, 0.26);
+  margin: 14px 0 0px 0px;
+}
+.menu__name__plat {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.menu__name__plat h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.menu__name__plat span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15.0431px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.menu__name__price {
+  display: flex;
+  align-items: flex-end;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.0431px;
+}
+
+.menu--margin {
+  margin-top: 35px;
+}
+
+.homepage__header__btn a {
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: linear-gradient(0.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 15px;
 }
 
 .footer {
@@ -59,4 +174,36 @@ body {
 }
 .footer__sec__link a svg {
   margin-right: 5px;
+}
+
+@media screen and (min-width: 767.8px) {
+  .carte {
+    justify-items: center;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+  }
+  .footer__title {
+    margin: 0;
+  }
+  .footer__sec {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .footer__sec__link {
+    margin: 9px;
+  }
+  .footer__sec__link a svg {
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .carte__title {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=menu.css.map */
