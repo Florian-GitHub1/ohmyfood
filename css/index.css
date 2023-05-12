@@ -9,20 +9,6 @@ body {
   background: rgba(210, 210, 210, 0.22);
 }
 
-@keyframes loaderend {
-  from {
-    opacity: 1;
-  }
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-@keyframes loader {
-  0% {
-    transform: translateY(-40px);
-  }
-}
 .loader {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.6980392157);
@@ -50,7 +36,7 @@ body {
   animation: loader 1s;
 }
 .loader .d2 {
-  background-color: #89C8FA;
+  background-color: #FF79DA;
   animation: loader 2s;
 }
 .loader .d3 {
@@ -58,6 +44,20 @@ body {
   animation: loader 3s;
 }
 
+@keyframes loaderend {
+  from {
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: translateY(-40px);
+  }
+}
 .header__title {
   display: flex;
   justify-content: center;

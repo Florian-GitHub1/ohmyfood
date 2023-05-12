@@ -9,22 +9,6 @@ body{
     background: rgb(210 210 210 / 22%);;
 }
 
-@keyframes loaderend{
-    from{ 
-        opacity: 1; 
-    }
-    to{ 
-        visibility: hidden;
-        opacity: 0; 
-     }
-}
-
-@keyframes loader {
-    0%{
-        transform: translateY(-40px);
-    }
-}
-
 .loader{
     position: fixed;
     background-color: #ffffffb2;
@@ -50,7 +34,7 @@ body{
             animation: loader 1s;
         }
         & .d2{
-            background-color: #89C8FA;
+            background-color: #FF79DA;
             animation: loader 2s;
         }
         & .d3{
@@ -59,6 +43,21 @@ body{
         }
 }
 
+@keyframes loaderend{
+    from{ 
+        opacity: 1; 
+    }
+    to{ 
+        visibility: hidden;
+        opacity: 0; 
+     }
+}
+
+@keyframes loader {
+    0%{
+        transform: translateY(-40px);
+    }
+}
 
 
 .header{
