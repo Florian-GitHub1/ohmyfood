@@ -19,7 +19,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loaderend 2.3s forwards 2.3s;
+    animation: loaderend 2.3s forwards 2.2s alternate;
     z-index: 3;
         &__dot{
             width: 35px;
@@ -27,19 +27,19 @@ body{
             border-radius: 50%;
             margin: 0 15px;
             animation: loader 3s forwards;
-            border: #000000 solid 1px;
+            border: #000000 solid 3px;
         }
         & .d1{
             background-color: #99E2D0;
-            animation: loader 1s;
+            animation: loader 0.4s;
         }
         & .d2{
             background-color: #FF79DA;
-            animation: loader 2s;
+            animation: loader .7s;
         }
         & .d3{
             background-color: #9356DC;
-            animation: loader 3s;
+            animation: loader 1s ;
         }
 }
 
@@ -55,7 +55,7 @@ body{
 
 @keyframes loader {
     0%{
-        transform: translateY(-40px);
+        transform: translateY(-90px);
     }
 }
 
