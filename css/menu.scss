@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+@import "../css/mixin.scss";
 
 .header{
     background-color: #FFFFFF;
@@ -32,13 +33,16 @@
     }
 }
 
+@include animationheart;
+@include btn__anim;
+
 .carte{
     position: relative;
     background-color: #F6F6F6;
     max-width: 1044px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     &__title{
         display: flex;
         position: absolute;
@@ -56,28 +60,37 @@
             }
             & svg{
                 margin: 0px 0px 7px 5%;
+                fill-opacity: 0;
+                stroke: #000000;
+                cursor: pointer;
             }
-    }
+            & svg:hover{
+                animation: heart .9s forwards;
+            }
+        }
     &__button{
         display: flex;
         justify-content: center;
             & button{
+                @include btn__style;
                 border: none;
                 font-weight: 500;
-                color: #FFFFFF;
-                text-decoration: none;
-                background: linear-gradient(0.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-                border-radius: 25px;
                 font-size: 16px;
                 padding: 15px 45px 15px 45px;
                 margin: 40px;
             }
+            & button:hover{
+                animation: btn__anim .25s forwards linear;
+            }
     }
 }
 
+
+@include menu__anim;
+
 .menu{
     padding: 30px 8px 0px 8px;
+    opacity: 0;
     &__title{
         padding-bottom: 3px;
         border-bottom: 3px solid #99E2D0;
@@ -90,16 +103,16 @@
     }
     &__name{
         display: flex;
-        justify-content: space-between;
         background-color: #ffffff;
         border-radius: 15px;
-        padding: 10px;
         box-shadow: 0px 1px 16px rgb(54 54 54 / 26%);
         margin: 14px 0 0px 0px;
+        overflow: hidden;
             &__plat{
                 display: flex;
                 flex-direction: column;
                 width: calc(85%);
+                padding: 10px;
                     & h2{
                         font-family: 'Roboto';
                         font-style: normal;
@@ -124,11 +137,33 @@
             &__price{
                 display: flex;
                 align-items: flex-end;
+                justify-content: flex-end;
+                width: 15%;
+                padding: 10px;
                 font-family: 'Roboto';
                 font-style: normal;
                 font-weight: 700;
                 font-size: 15.0431px;
             }
+            &__check{
+                background: #99E2D0;
+                width: 55px;
+                display: grid;
+                place-items: center;
+                margin-right: -4rem;
+            }
+            &:hover .menu__name__plat{
+                animation: check 1s forwards linear;
+            }      
+    }
+}
+
+@keyframes check{
+    from{
+        margin-right: 0rem;
+    }
+    to{
+        margin-right: -3.4rem;
     }
 }
 
@@ -184,7 +219,7 @@
 
 @media screen and (min-width: 767.8px){
     .carte{
-        justify-items: center;
+        align-items: center;
     }
     .menu{
         display: grid;

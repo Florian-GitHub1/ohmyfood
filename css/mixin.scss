@@ -1,0 +1,125 @@
+
+@mixin loader{
+    @keyframes loaderend{
+        from{ 
+            opacity: 1; 
+        }
+        to{ 
+            visibility: hidden;
+            opacity: 0; 
+         }
+    }
+    @keyframes loader {
+        0%{
+            transform: translateY(-90px);
+        }
+    }
+}
+
+
+
+
+@mixin menu__anim{
+    .plat1{
+        animation: menu__anim 1s forwards linear;
+    }
+    .plat2{
+        animation: menu__anim 1s forwards .5s linear;
+    }
+    .plat3{
+        animation: menu__anim 1s forwards 1s linear;
+    }
+    @keyframes menu__anim{
+        from{
+            transform: translateY(15px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }    
+}
+
+
+
+
+
+
+@mixin btn__style{
+    color: #FFFFFF;
+    text-decoration: none;
+    background: linear-gradient(0.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@mixin btn__anim{    
+    @keyframes btn__anim{
+        0%{
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            background: linear-gradient(0.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
+        }
+        25%{
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.30);
+            background: linear-gradient(0.33deg, rgb(147, 86, 220, 0.9) -11.44%, rgb(255, 121, 218, 0.9) 123.93%);
+        }
+        50%{
+            box-shadow: 0px 5.5px 14px rgba(0, 0, 0, 0.35);
+            background: linear-gradient(0.33deg, rgb(147, 86, 220, 0.85) -11.44%, rgb(255, 121, 218, 0.85) 123.93%);
+        }
+        75%{
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(0.33deg, rgb(147, 86, 220, 0.8) -11.44%, rgb(255, 121, 218, 0.8) 123.93%);
+        }
+        100%{
+            box-shadow: 0px 6px 17px rgba(0, 0, 0, 0.450);
+            background: linear-gradient(0.33deg, rgba(146, 86, 220, 0.725) -11.44%, rgba(255, 121, 217, 0.631) 123.93%);
+        }
+    }
+}
+
+
+
+
+@mixin animationheart{ 
+    @keyframes heart{
+        0%{
+            fill-opacity: 0;
+            stroke: #000000;
+            stroke-opacity: 1;
+            transform: scale(1);
+        }
+        25%{
+            fill-opacity: 0.2;
+            stroke: #000000;
+            stroke-opacity: 0.75;
+        }
+        50%{
+            fill-opacity: 0.4;
+            stroke: #000000;
+            stroke-opacity: 0.5;
+        }
+        75%{
+            fill-opacity: 0.6;
+            stroke: #000000;
+            stroke-opacity: 0.25;
+        }
+        85%{
+            fill-opacity: 0.8;
+            stroke: #000000;
+            stroke-opacity: 0.25;
+        }
+        100%{
+            fill-opacity: 1;
+            stroke: #000000;
+            stroke-opacity: 0;
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+
+

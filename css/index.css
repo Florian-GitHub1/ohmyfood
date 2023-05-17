@@ -9,6 +9,20 @@ body {
   background: rgba(210, 210, 210, 0.22);
 }
 
+@keyframes loaderend {
+  from {
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: translateY(-90px);
+  }
+}
 .loader {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.6980392157);
@@ -20,7 +34,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loaderend 2.3s forwards 2.2s alternate;
+  animation: loaderend 2s forwards 2s alternate;
   z-index: 3;
 }
 .loader__dot {
@@ -44,20 +58,6 @@ body {
   animation: loader 1s;
 }
 
-@keyframes loaderend {
-  from {
-    opacity: 1;
-  }
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-@keyframes loader {
-  0% {
-    transform: translateY(-90px);
-  }
-}
 .header__title {
   display: flex;
   justify-content: center;
@@ -79,6 +79,28 @@ body {
   padding-right: 15px;
 }
 
+@keyframes btn__anim {
+  0% {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(0.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
+  }
+  25% {
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(0.33deg, rgba(147, 86, 220, 0.9) -11.44%, rgba(255, 121, 218, 0.9) 123.93%);
+  }
+  50% {
+    box-shadow: 0px 5.5px 14px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(0.33deg, rgba(147, 86, 220, 0.85) -11.44%, rgba(255, 121, 218, 0.85) 123.93%);
+  }
+  75% {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(0.33deg, rgba(147, 86, 220, 0.8) -11.44%, rgba(255, 121, 218, 0.8) 123.93%);
+  }
+  100% {
+    box-shadow: 0px 6px 17px rgba(0, 0, 0, 0.45);
+    background: linear-gradient(0.33deg, rgba(146, 86, 220, 0.725) -11.44%, rgba(255, 121, 217, 0.631) 123.93%);
+  }
+}
 .homepage__header {
   text-align: center;
   padding: 30px 30px 60px 30px;
@@ -105,6 +127,9 @@ body {
   font-size: 16px;
   padding: 15px;
 }
+.homepage__header__btn a:hover {
+  animation: btn__anim 0.25s forwards linear;
+}
 
 .function {
   gap: 20px;
@@ -118,6 +143,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0px 10px;
+  cursor: pointer;
 }
 .function__card__style {
   display: flex;
@@ -150,6 +176,40 @@ body {
   background-color: rgba(146, 86, 220, 0.1921568627);
 }
 
+@keyframes heart {
+  0% {
+    fill-opacity: 0;
+    stroke: #000000;
+    stroke-opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    fill-opacity: 0.2;
+    stroke: #000000;
+    stroke-opacity: 0.75;
+  }
+  50% {
+    fill-opacity: 0.4;
+    stroke: #000000;
+    stroke-opacity: 0.5;
+  }
+  75% {
+    fill-opacity: 0.6;
+    stroke: #000000;
+    stroke-opacity: 0.25;
+  }
+  85% {
+    fill-opacity: 0.8;
+    stroke: #000000;
+    stroke-opacity: 0.25;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke: #000000;
+    stroke-opacity: 0;
+    transform: scale(1.1);
+  }
+}
 .restaurants {
   padding: 30px 15px;
 }
@@ -183,7 +243,7 @@ body {
 }
 .restaurants__cards__style img {
   width: 100%;
-  height: 165px;
+  height: 180px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   -o-object-fit: cover;
@@ -204,8 +264,14 @@ body {
 .restaurants__cards__style__content__rating {
   display: flex;
   align-items: start;
+  fill-opacity: 0;
+  stroke: #000000;
   padding: 6px 11px 0 0;
   z-index: 2;
+  cursor: pointer;
+}
+.restaurants__cards__style__content__rating svg:hover {
+  animation: heart 0.8s forwards;
 }
 
 .footer {

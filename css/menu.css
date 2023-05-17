@@ -30,13 +30,69 @@
      object-fit: cover;
 }
 
+@keyframes heart {
+  0% {
+    fill-opacity: 0;
+    stroke: #000000;
+    stroke-opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    fill-opacity: 0.2;
+    stroke: #000000;
+    stroke-opacity: 0.75;
+  }
+  50% {
+    fill-opacity: 0.4;
+    stroke: #000000;
+    stroke-opacity: 0.5;
+  }
+  75% {
+    fill-opacity: 0.6;
+    stroke: #000000;
+    stroke-opacity: 0.25;
+  }
+  85% {
+    fill-opacity: 0.8;
+    stroke: #000000;
+    stroke-opacity: 0.25;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke: #000000;
+    stroke-opacity: 0;
+    transform: scale(1.1);
+  }
+}
+@keyframes btn__anim {
+  0% {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(0.33deg, rgb(147, 86, 220) -11.44%, rgb(255, 121, 218) 123.93%);
+  }
+  25% {
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(0.33deg, rgba(147, 86, 220, 0.9) -11.44%, rgba(255, 121, 218, 0.9) 123.93%);
+  }
+  50% {
+    box-shadow: 0px 5.5px 14px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(0.33deg, rgba(147, 86, 220, 0.85) -11.44%, rgba(255, 121, 218, 0.85) 123.93%);
+  }
+  75% {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(0.33deg, rgba(147, 86, 220, 0.8) -11.44%, rgba(255, 121, 218, 0.8) 123.93%);
+  }
+  100% {
+    box-shadow: 0px 6px 17px rgba(0, 0, 0, 0.45);
+    background: linear-gradient(0.33deg, rgba(146, 86, 220, 0.725) -11.44%, rgba(255, 121, 217, 0.631) 123.93%);
+  }
+}
 .carte {
   position: relative;
   background-color: #F6F6F6;
   max-width: 1044px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-direction: column;
 }
 .carte__title {
   display: flex;
@@ -56,26 +112,59 @@
 }
 .carte__title svg {
   margin: 0px 0px 7px 5%;
+  fill-opacity: 0;
+  stroke: #000000;
+  cursor: pointer;
+}
+.carte__title svg:hover {
+  animation: heart 0.9s forwards;
 }
 .carte__button {
   display: flex;
   justify-content: center;
 }
 .carte__button button {
-  border: none;
-  font-weight: 500;
   color: #FFFFFF;
   text-decoration: none;
   background: linear-gradient(0.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
   font-size: 16px;
   padding: 15px 45px 15px 45px;
   margin: 40px;
 }
+.carte__button button:hover {
+  animation: btn__anim 0.25s forwards linear;
+}
 
+.plat1 {
+  animation: menu__anim 1s forwards linear;
+}
+
+.plat2 {
+  animation: menu__anim 1s forwards 0.5s linear;
+}
+
+.plat3 {
+  animation: menu__anim 1s forwards 1s linear;
+}
+
+@keyframes menu__anim {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .menu {
   padding: 30px 8px 0px 8px;
+  opacity: 0;
 }
 .menu__title {
   padding-bottom: 3px;
@@ -89,17 +178,17 @@
 }
 .menu__name {
   display: flex;
-  justify-content: space-between;
   background-color: #ffffff;
   border-radius: 15px;
-  padding: 10px;
   box-shadow: 0px 1px 16px rgba(54, 54, 54, 0.26);
   margin: 14px 0 0px 0px;
+  overflow: hidden;
 }
 .menu__name__plat {
   display: flex;
   flex-direction: column;
   width: 85%;
+  padding: 10px;
 }
 .menu__name__plat h2 {
   font-family: "Roboto";
@@ -124,12 +213,33 @@
 .menu__name__price {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
+  width: 15%;
+  padding: 10px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 15.0431px;
 }
+.menu__name__check {
+  background: #99E2D0;
+  width: 55px;
+  display: grid;
+  place-items: center;
+  margin-right: -4rem;
+}
+.menu__name:hover .menu__name__plat {
+  animation: check 1s forwards linear;
+}
 
+@keyframes check {
+  from {
+    margin-right: 0rem;
+  }
+  to {
+    margin-right: -3.4rem;
+  }
+}
 .menu--margin {
   margin-top: 35px;
 }
@@ -178,7 +288,7 @@
 
 @media screen and (min-width: 767.8px) {
   .carte {
-    justify-items: center;
+    align-items: center;
   }
   .menu {
     display: grid;
