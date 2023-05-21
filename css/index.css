@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: rgba(210, 210, 210, 0.22);
+  background: #FFFFFF;
 }
 
 .header__title {
@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: center;
   color: #353535;
-  background-color: rgba(210, 210, 210, 0.25);
+  background-color: #EAEAEA;
   font-weight: 500;
   width: 100%;
   padding: 15px 0 15px;
@@ -53,6 +53,7 @@ body {
   }
 }
 .homepage__header {
+  background-color: #F6F6F6;
   text-align: center;
   padding: 30px 30px 60px 30px;
 }
@@ -162,6 +163,7 @@ body {
   }
 }
 .restaurants {
+  background-color: #F6F6F6;
   padding: 30px 15px;
 }
 .restaurants h2 {
@@ -226,6 +228,9 @@ body {
 }
 
 @media screen and (min-width: 767.8px) {
+  .homepage__header h2 {
+    font-size: 40px;
+  }
   .function {
     padding: 30px 15px;
   }
