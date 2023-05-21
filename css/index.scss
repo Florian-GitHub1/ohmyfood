@@ -12,44 +12,6 @@ body{
 }
 
 
-
-@include loader;
-
-.loader{
-    position: fixed;
-    background-color: #ffffffb2;
-    backdrop-filter: blur(10px);
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: loaderend 2s forwards 2s alternate;
-    z-index: 3;
-        &__dot{
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            margin: 0 15px;
-            animation: loader 3s forwards;
-            border: #000000 solid 3px;
-        }
-        & .d1{
-            background-color: #99E2D0;
-            animation: loader 0.4s;
-        }
-        & .d2{
-            background-color: #FF79DA;
-            animation: loader .7s;
-        }
-        & .d3{
-            background-color: #9356DC;
-            animation: loader 1s ;
-        }
-}
-
-
 .header{
     &__title{
         display: flex;
@@ -221,38 +183,6 @@ body{
 }
 
 
-.footer{
-    padding: 22px;
-    background-color: #353535;
-    color: #FFFFFF;
-    &__title{
-        font-family: 'Shrikhand', sans-serif;
-        font-style: italic;
-        font-weight: 400;
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-    &__sec{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        &__link{
-            margin-bottom: 9px;
-            & a{
-                text-decoration: none;
-                color: #FFFFFF;
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px; 
-                & svg{
-                    margin-right: 5px;
-                }
-            }
-        }
-    }
-}
-
-
 
 @media screen and (min-width: 767.8px){
     .function{
@@ -263,7 +193,6 @@ body{
             gap: 20px;
         }     
     }
-
     .restaurants{
         padding: 30px 15px;
         &__cards{
@@ -273,29 +202,6 @@ body{
             justify-items: stretch;
             &__style{
                 margin-bottom: 0;
-            }
-        }
-    }
-
-
-    .footer{
-        padding: 50px 35px 0 0px;
-        height: 150px;
-        &__title{
-            margin-left: 40px;
-            margin-bottom: 0;
-        }
-        &__sec{
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            &__link{
-                margin: 9px;
-                & a{
-                    & svg{
-                        margin-right: 5px;
-                    }
-                }
             }
         }
     }

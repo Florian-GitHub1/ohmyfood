@@ -10,8 +10,8 @@
          }
     }
     @keyframes loader {
-        0%{
-            transform: translateY(-90px);
+        100%{
+            transform: translateY(-30px);
         }
     }
 }
@@ -39,9 +39,28 @@
             opacity: 1;
         }
     }    
+    @keyframes btn__appear{
+        from{
+            opacity: 0;
+            transform: translateY(15px)
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px)
+        }
+    }
 }
 
-
+@mixin checked__rotate{
+    @keyframes rotate_center {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }    
+}
 
 
 
