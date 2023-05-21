@@ -348,10 +348,10 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .function {
-    padding: 50px 80px;
+    padding: 50px 10%;
   }
   .restaurants {
-    padding: 50px 80px 80px 80px;
+    padding: 50px 10% 80px 10%;
   }
   .restaurants__cards {
     gap: 50px 60px;

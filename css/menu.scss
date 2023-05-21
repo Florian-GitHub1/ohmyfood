@@ -21,7 +21,7 @@
     &__arrow{
         display: flex;
         align-items: center;
-       padding-left: 25px;
+        padding-left: 25px;
     }
 }
 
@@ -55,7 +55,7 @@
             & h2{
                 font-family: 'Shrikhand', sans-serif;
                 font-weight: 400;
-                font-size: 27px;
+                font-size: 26px;
                 margin-left: 2px;
             }
             & svg{
@@ -91,81 +91,102 @@
 .menu{
     padding: 30px 8px 0px 8px;
     opacity: 0;
+    font-family: 'Roboto', sans-serif;
     &__title{
         padding-bottom: 3px;
         border-bottom: 3px solid #99E2D0;
         width: 30px;
         text-transform: uppercase;
-        font-family: 'Roboto';
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
     }
-    &__name{
+    & .menu-card{
         display: flex;
-        background-color: #ffffff;
+        width: 100%;
+        margin: 10px 0px;
+        padding: 0;
+        background-color: #FFFFFF;
+        font-family: 'Roboto', sans-serif;
         border-radius: 15px;
-        box-shadow: 0px 1px 16px rgb(54 54 54 / 26%);
-        margin: 14px 0 0px 0px;
+        box-shadow: 0px 5px 8px rgb(213 213 213 / 35%);;
         overflow: hidden;
-            &__plat{
-                display: flex;
-                flex-direction: column;
-                width: calc(85%);
-                padding: 10px;
-                    & h2{
-                        font-family: 'Roboto';
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 18px; 
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        width: calc(100%);
-                    }
-                    & span{
-                        font-family: 'Roboto';
-                        font-style: normal;
-                        font-weight: 300;
-                        font-size: 15.0431px;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        width: calc(100%);
-                    }
-            }
-            &__price{
-                display: flex;
-                align-items: flex-end;
-                justify-content: flex-end;
-                width: 15%;
-                padding: 10px;
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 15.0431px;
-            }
-            &__check{
-                background: #99E2D0;
-                width: 55px;
-                display: grid;
-                place-items: center;
-                margin-right: -4rem;
-            }
-            &:hover .menu__name__plat{
-                animation: check 1s forwards linear;
-            }      
-    }
+        cursor: pointer;
+        &__info{
+            display: flex;
+            width: 100%;
+            margin: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &__description{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            padding: 5px;
+                & h4{
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px; 
+                }
+                & p{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 15.0431px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+        }
+        &__price{
+            display: flex;
+            align-items: flex-end;
+            width: 15%;
+            padding: 5px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15.0431px;
+            justify-content: flex-end;
+        }
+        &__checkout{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            width: 75px;
+            margin-right: -75px;
+            border-radius: 0px 15px 15px 0px;
+            background-color: #99e2d0;
+            transition: margin-right 0.9s ease-in-out;
+                
+        }
+    }     
 }
 
-@keyframes check{
-    from{
-        margin-right: 0rem;
-    }
-    to{
-        margin-right: -3.4rem;
-    }
+.menu-card:hover .menu-card__checkout{
+    margin-right: 0px;
+        & svg{
+            animation: rotate_center 0.9s reverse ease-in-out;
+        }
 }
+
+
+@keyframes rotate_center {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
 
 .menu--margin{
     margin-top: 35px;
@@ -196,11 +217,13 @@
         margin-bottom: 15px;
     }
     &__sec{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        &__link{
-            margin-bottom: 9px;
-            & a{
+        &__links{
+            display: flex;
+            flex-direction: column;
+            &-span{
+                margin-bottom: 9px;
+            }
+            &-span a{
                 text-decoration: none;
                 color: #FFFFFF;
                 font-family: 'Roboto';
@@ -232,7 +255,7 @@
         padding: 50px 35px 0 0px;
         height: 130px;
         &__title{
-            margin: 0;
+            margin: 0px 0 0 20px;
         }
         &__sec{
             display: flex;
@@ -244,6 +267,21 @@
                     & svg{
                         margin-right: 5px;
                     }
+                }
+            }
+        }
+    }
+    .footer{
+        padding: 50px 35px 0 0px;
+        height: 130px;
+        &__title{
+            margin: 0px 0 0 20px;
+        }
+        &__sec{
+            &__links{
+                flex-direction: row;
+                &-span{
+                    margin: 5px;
                 }
             }
         }

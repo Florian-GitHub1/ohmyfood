@@ -107,7 +107,7 @@
 .carte__title h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
-  font-size: 27px;
+  font-size: 26px;
   margin-left: 2px;
 }
 .carte__title svg {
@@ -165,79 +165,98 @@
 .menu {
   padding: 30px 8px 0px 8px;
   opacity: 0;
+  font-family: "Roboto", sans-serif;
 }
 .menu__title {
   padding-bottom: 3px;
   border-bottom: 3px solid #99E2D0;
   width: 30px;
   text-transform: uppercase;
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
 }
-.menu__name {
+.menu .menu-card {
   display: flex;
-  background-color: #ffffff;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 0;
+  background-color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
   border-radius: 15px;
-  box-shadow: 0px 1px 16px rgba(54, 54, 54, 0.26);
-  margin: 14px 0 0px 0px;
+  box-shadow: 0px 5px 8px rgba(213, 213, 213, 0.35);
   overflow: hidden;
+  cursor: pointer;
 }
-.menu__name__plat {
+.menu .menu-card__info {
   display: flex;
-  flex-direction: column;
-  width: 85%;
-  padding: 10px;
+  width: 100%;
+  margin: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu__name__plat h2 {
-  font-family: "Roboto";
+.menu .menu-card__description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 5px;
+}
+.menu .menu-card__description h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
 }
-.menu__name__plat span {
-  font-family: "Roboto";
+.menu .menu-card__description p {
   font-style: normal;
   font-weight: 300;
   font-size: 15.0431px;
-  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 100%;
+  text-overflow: ellipsis;
 }
-.menu__name__price {
+.menu .menu-card__price {
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
   width: 15%;
-  padding: 10px;
-  font-family: "Roboto";
+  padding: 5px;
   font-style: normal;
   font-weight: 700;
   font-size: 15.0431px;
+  justify-content: flex-end;
 }
-.menu__name__check {
-  background: #99E2D0;
-  width: 55px;
-  display: grid;
-  place-items: center;
-  margin-right: -4rem;
-}
-.menu__name:hover .menu__name__plat {
-  animation: check 1s forwards linear;
+.menu .menu-card__checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 75px;
+  margin-right: -75px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99e2d0;
+  transition: margin-right 0.9s ease-in-out;
 }
 
-@keyframes check {
-  from {
-    margin-right: 0rem;
+.menu-card:hover .menu-card__checkout {
+  margin-right: 0px;
+}
+.menu-card:hover .menu-card__checkout svg {
+  animation: rotate_center 0.9s reverse ease-in-out;
+}
+
+@keyframes rotate_center {
+  0% {
+    transform: rotate(0deg);
   }
-  to {
-    margin-right: -3.4rem;
+  100% {
+    transform: rotate(360deg);
   }
 }
 .menu--margin {
@@ -267,14 +286,14 @@
   font-size: 18px;
   margin-bottom: 15px;
 }
-.footer__sec {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+.footer__sec__links {
+  display: flex;
+  flex-direction: column;
 }
-.footer__sec__link {
+.footer__sec__links-span {
   margin-bottom: 9px;
 }
-.footer__sec__link a {
+.footer__sec__links-span a {
   text-decoration: none;
   color: #FFFFFF;
   font-family: "Roboto";
@@ -282,7 +301,7 @@
   font-weight: 400;
   font-size: 16px;
 }
-.footer__sec__link a svg {
+.footer__sec__links-span a svg {
   margin-right: 5px;
 }
 
@@ -302,7 +321,7 @@
     height: 130px;
   }
   .footer__title {
-    margin: 0;
+    margin: 0px 0 0 20px;
   }
   .footer__sec {
     display: flex;
@@ -314,6 +333,19 @@
   }
   .footer__sec__link a svg {
     margin-right: 5px;
+  }
+  .footer {
+    padding: 50px 35px 0 0px;
+    height: 130px;
+  }
+  .footer__title {
+    margin: 0px 0 0 20px;
+  }
+  .footer__sec__links {
+    flex-direction: row;
+  }
+  .footer__sec__links-span {
+    margin: 5px;
   }
 }
 @media screen and (min-width: 425px) {
