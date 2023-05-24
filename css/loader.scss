@@ -15,12 +15,12 @@
     animation: loaderend 2s forwards 3s alternate;
     z-index: 3;
         &__dot{
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            margin: 0 13px;
+            margin: 0px -5px;
             animation: loader 700ms infinite 1s alternate;
-            border: 1px solid #0000006e;
+            border: 1px solid rgba(0, 0, 0, 0.431372549);
             box-shadow: inset 8px -10px 4px 0px rgba(0, 0, 0, 0.15);
         }
         & .d1{
@@ -33,7 +33,7 @@
         }
         & .d3{
             background-color: #9880ff;
-            animation-delay:  0.45s;
+            animation-delay:  0.40s;
         }
 }
 
