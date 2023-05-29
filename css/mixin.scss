@@ -104,35 +104,36 @@
 
 @mixin animationheart{ 
     @keyframes heart{
+        $stroke_color : #000000;
         0%{
             fill-opacity: 0;
-            stroke: #000000;
+            stroke: $stroke_color;
             stroke-opacity: 1;
             transform: scale(1);
         }
         25%{
             fill-opacity: 0.2;
-            stroke: #000000;
+            stroke: $stroke_color;
             stroke-opacity: 0.75;
         }
         50%{
             fill-opacity: 0.4;
-            stroke: #000000;
+            stroke: $stroke_color;
             stroke-opacity: 0.5;
         }
         75%{
             fill-opacity: 0.6;
-            stroke: #000000;
+            stroke: $stroke_color;
             stroke-opacity: 0.25;
         }
         85%{
             fill-opacity: 0.8;
-            stroke: #000000;
+            stroke: $stroke_color;
             stroke-opacity: 0.25;
         }
         100%{
             fill-opacity: 1;
-            stroke: #000000;
+            stroke: $stroke_color;
             stroke-opacity: 0;
             transform: scale(1.1);
         }

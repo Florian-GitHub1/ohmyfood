@@ -27,8 +27,8 @@
   z-index: 3;
 }
 .loader__dot {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   margin: 0px -5px;
   animation: loader 700ms infinite 1s alternate;
@@ -45,5 +45,5 @@
 }
 .loader .d3 {
   background-color: #9880ff;
-  animation-delay: 0.45s;
+  animation-delay: 0.4s;
 }/*# sourceMappingURL=loader.css.map */
