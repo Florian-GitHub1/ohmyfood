@@ -227,8 +227,6 @@ body {
 }
 .menu .menu-card__description h3 {
   margin: 0;
-  font-size: 16px;
-  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
