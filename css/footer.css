@@ -1,14 +1,18 @@
 .footer {
-  padding: 22px;
-  background-color: #353535;
-  color: #FFFFFF;
+  width: 100%;
+  background-color: var(--bg-dark);
+  color: var(--txt-light);
+  padding: 12px 0px 12px 16px;
 }
 .footer__title {
-  font-family: "Shrikhand", sans-serif;
-  font-style: italic;
+  font-family: "Fraunces", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+.footer__title span {
+  font-family: "FrauncesItal", serif;
+  font-weight: 900;
 }
 .footer__sec__links {
   display: flex;
@@ -17,34 +21,52 @@
 .footer__sec__links-span {
   margin-bottom: 9px;
 }
+.footer__sec__links-span:nth-of-type(4) {
+  margin-bottom: 0px;
+}
 .footer__sec__links-span a {
   text-decoration: none;
-  color: #FFFFFF;
-  font-family: "Roboto";
+  color: var(--txt-light);
+  font-family: "Opensauce_light", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 16px;
 }
 .footer__sec__links-span a svg {
-  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  stroke: var(--bg-color);
+  stroke-width: 1px;
+  margin-right: 6px;
 }
 
 @media screen and (min-width: 767.8px) {
   .footer {
-    padding: 50px 35px 0 0px;
-    height: 130px;
+    padding: 16px 0px 16px 32px;
   }
   .footer__title {
-    margin: 0px 0 0 20px;
+    font-size: 24px;
+    margin-bottom: 0;
   }
   .footer__sec {
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: center;
   }
   .footer__sec__links {
     flex-direction: row;
+    align-items: center;
   }
   .footer__sec__links-span {
-    margin: 5px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+  .footer__sec__links-span:nth-of-type(4) {
+    margin-right: 0px;
+    margin-bottom: 0;
+  }
+  .footer__sec__links-span a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
   }
 }/*# sourceMappingURL=footer.css.map */

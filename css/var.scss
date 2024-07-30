@@ -1,0 +1,30 @@
+:root {
+	--txt-color: #202020;
+	--txt-light: #ffffff;
+	--txt-accent-color: #008766;
+	--bg-color: #ffffff;
+	--bg2-color: #f2f2f2;
+	--bg-dark: #202020;
+	--bg-accent-color: #99e2d0;
+}
+
+@font-face {
+	font-family: 'FrauncesItal';
+	src: url(../fonts/FrauncesItal_var.ttf);
+}
+@font-face {
+	font-family: 'Fraunces';
+	src: url(../fonts/Fraunces_var.ttf);
+}
+@font-face {
+	font-family: 'Opensauce_light';
+	src: url(../fonts/OpenSauceSans-Light.ttf);
+}
+@font-face {
+	font-family: 'Opensauce_medium';
+	src: url(../fonts/OpenSauceSans-Medium.ttf);
+}
+@font-face {
+	font-family: 'Opensauce_regular';
+	src: url(../fonts/OpenSauceSans-Regular.ttf);
+}

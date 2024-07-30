@@ -1,202 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfood</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="loader">
-        <div class="loader__dot d1"></div>
-        <div class="loader__dot d2"></div>
-        <div class="loader__dot d3"></div>
-    </div>
-    <header class="header">
-        <h1 class="header__title">ohmyfood</h1>
-        <div class="header__location">
-            <span class="header__location__pin">
-                <svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.38337 16.1772C0.842812 9.59472 0 8.91915 0 6.5C0 3.18628 2.68628 0.5 6 0.5C9.31372 0.5 12 3.18628 12 6.5C12 8.91915 11.1572 9.59472 6.61662 16.1772C6.31865 16.6076 5.68131 16.6076 5.38337 16.1772ZM6 9C7.38072 9 8.5 7.88072 8.5 6.5C8.5 5.11928 7.38072 4 6 4C4.61928 4 3.5 5.11928 3.5 6.5C3.5 7.88072 4.61928 9 6 9Z" fill="#353535"/>
-                </svg>
-            </span>
-            <span class="header__location__text">Paris, Belleville</span>
-        </div>
-    </header>
-    <main>
-        <section class="homepage__header">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p class="homepage__header__subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <div class="homepage__header__btn">
-                <a href="#">Explorer nos restaurants</a>
-            </div>
-        </section>
-        <section class="function">
-            <h2>Fonctionnement</h2>
-            <div class="function__cards">
-                <div class="function__card__style">
-                    <span class="function__card__style__number">1</span>
-                    <span class="function__card__style__icon">
-                        <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.0487 0.543091H2.9356C1.85748 0.543091 0.982788 1.37885 0.982788 2.40898V18.58C0.982788 19.6101 1.85748 20.4459 2.9356 20.4459H12.0487C13.1268 20.4459 14.0015 19.6101 14.0015 18.58V2.40898C14.0015 1.37885 13.1268 0.543091 12.0487 0.543091ZM7.49216 19.202C6.77206 19.202 6.19028 18.6461 6.19028 17.958C6.19028 17.27 6.77206 16.7141 7.49216 16.7141C8.21226 16.7141 8.79403 17.27 8.79403 17.958C8.79403 18.6461 8.21226 19.202 7.49216 19.202ZM12.0487 15.0037C12.0487 15.2603 11.829 15.4702 11.5605 15.4702H3.4238C3.15529 15.4702 2.9356 15.2603 2.9356 15.0037V2.87545C2.9356 2.61889 3.15529 2.40898 3.4238 2.40898H11.5605C11.829 2.40898 12.0487 2.61889 12.0487 2.87545V15.0037Z" fill="#7E7E7E"/>
-                        </svg>
-                    </span>
-                    <span class="function__card__style__text">Choisissez un restaurant</span>
-                </div>
-                <div class="function__card__style">
-                    <span class="function__card__style__number">2</span>
-                    <span class="function__card__style__icon">
-                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.5 0.209595C1.20333 0.209595 0.913319 0.317343 0.666645 0.519215C0.419972 0.721087 0.227713 1.00802 0.114181 1.34372C0.000649929 1.67942 -0.0290551 2.04881 0.0288228 2.40519C0.0867006 2.76157 0.229562 3.08892 0.439341 3.34586C0.649119 3.60279 0.916394 3.77777 1.20737 3.84865C1.49834 3.91954 1.79994 3.88316 2.07403 3.74411C2.34812 3.60506 2.58238 3.36958 2.74721 3.06746C2.91203 2.76533 3 2.41013 3 2.04677C3 1.55952 2.84197 1.09223 2.56066 0.747692C2.27936 0.403154 1.89783 0.209595 1.5 0.209595ZM1.5 6.33353C1.20333 6.33353 0.913319 6.44128 0.666645 6.64315C0.419972 6.84502 0.227713 7.13195 0.114181 7.46765C0.000649929 7.80335 -0.0290551 8.17275 0.0288228 8.52912C0.0867006 8.8855 0.229562 9.21286 0.439341 9.46979C0.649119 9.72672 0.916394 9.9017 1.20737 9.97259C1.49834 10.0435 1.79994 10.0071 2.07403 9.86804C2.34812 9.72899 2.58238 9.49351 2.74721 9.19139C2.91203 8.88927 3 8.53407 3 8.17071C3 7.68346 2.84197 7.21616 2.56066 6.87163C2.27936 6.52709 1.89783 6.33353 1.5 6.33353ZM1.5 12.4575C1.20333 12.4575 0.913319 12.5652 0.666645 12.7671C0.419972 12.969 0.227713 13.2559 0.114181 13.5916C0.000649929 13.9273 -0.0290551 14.2967 0.0288228 14.6531C0.0867006 15.0094 0.229562 15.3368 0.439341 15.5937C0.649119 15.8507 0.916394 16.0256 1.20737 16.0965C1.49834 16.1674 1.79994 16.131 2.07403 15.992C2.34812 15.8529 2.58238 15.6174 2.74721 15.3153C2.91203 15.0132 3 14.658 3 14.2946C3 13.8074 2.84197 13.3401 2.56066 12.9956C2.27936 12.651 1.89783 12.4575 1.5 12.4575ZM15.5 13.0699H5.5C5.36739 13.0699 5.24022 13.1344 5.14645 13.2492C5.05268 13.3641 5 13.5198 5 13.6822V14.907C5 15.0695 5.05268 15.2252 5.14645 15.3401C5.24022 15.4549 5.36739 15.5194 5.5 15.5194H15.5C15.6326 15.5194 15.7598 15.4549 15.8536 15.3401C15.9473 15.2252 16 15.0695 16 14.907V13.6822C16 13.5198 15.9473 13.3641 15.8536 13.2492C15.7598 13.1344 15.6326 13.0699 15.5 13.0699ZM15.5 0.821988H5.5C5.36739 0.821988 5.24022 0.886508 5.14645 1.00135C5.05268 1.1162 5 1.27196 5 1.43438V2.65917C5 2.82158 5.05268 2.97735 5.14645 3.0922C5.24022 3.20704 5.36739 3.27156 5.5 3.27156H15.5C15.6326 3.27156 15.7598 3.20704 15.8536 3.0922C15.9473 2.97735 16 2.82158 16 2.65917V1.43438C16 1.27196 15.9473 1.1162 15.8536 1.00135C15.7598 0.886508 15.6326 0.821988 15.5 0.821988V0.821988ZM15.5 6.94592H5.5C5.36739 6.94592 5.24022 7.01044 5.14645 7.12529C5.05268 7.24013 5 7.3959 5 7.55831V8.7831C5 8.94552 5.05268 9.10128 5.14645 9.21613C5.24022 9.33098 5.36739 9.39549 5.5 9.39549H15.5C15.6326 9.39549 15.7598 9.33098 15.8536 9.21613C15.9473 9.10128 16 8.94552 16 8.7831V7.55831C16 7.3959 15.9473 7.24013 15.8536 7.12529C15.7598 7.01044 15.6326 6.94592 15.5 6.94592Z" fill="#7E7E7E"/>
-                        </svg>   
-                    </span>
-                    <span class="function__card__style__text">Composez votre menu</span>
-                </div>
-                <div class="function__card__style">
-                    <span class="function__card__style__number">3</span>
-                    <span class="function__card__style__icon">
-                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.5914 4.43686L15.6947 0.812378C15.5252 0.487014 15.2242 0.287598 14.9027 0.287598H3.09613C2.77466 0.287598 2.47365 0.487014 2.30415 0.812378L0.407495 4.43686C-0.571518 6.30858 0.296443 8.91149 2.12588 9.20887C2.25739 9.22986 2.39182 9.24035 2.52625 9.24035C3.39129 9.24035 4.15697 8.78554 4.683 8.08234C5.20904 8.78554 5.97764 9.24035 6.83976 9.24035C7.70479 9.24035 8.47047 8.78554 8.99651 8.08234C9.52254 8.78554 10.2911 9.24035 11.1533 9.24035C12.0183 9.24035 12.784 8.78554 13.31 8.08234C13.839 8.78554 14.6046 9.24035 15.4668 9.24035C15.6041 9.24035 15.7356 9.22986 15.8671 9.20887C17.7024 8.91499 18.5733 6.31208 17.5914 4.43686ZM15.4726 10.3634C15.1804 10.3634 14.891 10.3109 14.6105 10.2304V13.722H3.38837V10.2304C3.10782 10.3074 2.8185 10.3634 2.52625 10.3634C2.35091 10.3634 2.17264 10.3494 2.00022 10.3214C1.83656 10.2934 1.67583 10.2479 1.52094 10.1955V17.0806C1.52094 17.6998 1.93885 18.2001 2.45612 18.2001H15.5486C16.0659 18.2001 16.4838 17.6998 16.4838 17.0806V10.1955C16.326 10.2514 16.1681 10.2969 16.0045 10.3214C15.8262 10.3494 15.6509 10.3634 15.4726 10.3634Z" fill="#9356DC"/>
-                        </svg>        
-                    </span>
-                    <span class="function__card__style__text">Dégustez au restaurant</span>
-                </div>
-            </div>
-        </section>
-        <section class="restaurants">
-            <h2>Restaurants</h2>
-            <div class="restaurants__cards">
-                <article class="restaurants__cards__style">
-                    <a href="html/palette.html">Lien</a>
-                    <p class="restaurants__cards__style__new">Nouveau</p>
-                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                    <div class="restaurants__cards__style__content">
-                        <div class="restaurants__cards__style__content__txt">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
-                        </div>
-                        <div class="restaurants__cards__style__content__rating">
-                            <svg width="22" height="21" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.865 1.81533C17.5103 -0.373737 14.0083 0.0200132 11.847 2.45283L11.0005 3.40439L10.154 2.45283C7.99701 0.0200132 
-                                4.49076 -0.373737 2.13607 1.81533C-0.562363 4.32783 -0.704161 8.8372 1.71068 11.5606L10.0251 20.9263C10.5622 21.531 11.4345 
-                                21.531 11.9716 20.9263L20.2861 11.5606C22.7052 8.8372 22.5634 4.32783 19.865 1.81533Z" fill="url(#paint0_linear_52876_656)"
-                                />
-                                <defs>
-                                    <linearGradient id="paint0_linear_52876_656" x1="11.0002" y1="-5.0807" x2="3.43443" y2="28.3717" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0" stop-color="#9356DC"/>
-                                    <stop offset="1" stop-color="#FF79DA"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>      
-                        </div>
-                    </div>
-                </article>
-                <article class="restaurants__cards__style">
-                    <a href="html/note.html">Lien</a>
-                    <p class="restaurants__cards__style__new">Nouveau</p>
-                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-                    <div class="restaurants__cards__style__content">
-                        <div class="restaurants__cards__style__content__txt">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
-                        </div>
-                        <div class="restaurants__cards__style__content__rating">
-                            <svg width="22" height="21" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.865 1.81533C17.5103 -0.373737 14.0083 0.0200132 11.847 2.45283L11.0005 3.40439L10.154 2.45283C7.99701 0.0200132 
-                                4.49076 -0.373737 2.13607 1.81533C-0.562363 4.32783 -0.704161 8.8372 1.71068 11.5606L10.0251 20.9263C10.5622 21.531 11.4345 
-                                21.531 11.9716 20.9263L20.2861 11.5606C22.7052 8.8372 22.5634 4.32783 19.865 1.81533Z" fill="url(#paint0_linear_52876_656)"
-                                />
-                            </svg>             
-                        </div>
-                    </div>
-                </article>
-                <article class="restaurants__cards__style">
-                    <a href="html/francaise.html">Lien</a>
-                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-                    <div class="restaurants__cards__style__content">
-                        <div class="restaurants__cards__style__content__txt">
-                            <h3>À la française</h3>
-                            <p>Cité Rouge
-                            </p>
-                        </div>
-                        <div class="restaurants__cards__style__content__rating">
-                            <svg width="22" height="21" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.865 1.81533C17.5103 -0.373737 14.0083 0.0200132 11.847 2.45283L11.0005 3.40439L10.154 2.45283C7.99701 0.0200132 
-                                4.49076 -0.373737 2.13607 1.81533C-0.562363 4.32783 -0.704161 8.8372 1.71068 11.5606L10.0251 20.9263C10.5622 21.531 11.4345 
-                                21.531 11.9716 20.9263L20.2861 11.5606C22.7052 8.8372 22.5634 4.32783 19.865 1.81533Z" fill="url(#paint0_linear_52876_656)"
-                                />
-                            </svg>                 
-                        </div>
-                    </div>
-                </article>
-                <article class="restaurants__cards__style">
-                    <a href="html/delice.html">Lien</a>
-                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-                    <div class="restaurants__cards__style__content">
-                        <div class="restaurants__cards__style__content__txt">
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                        <div class="restaurants__cards__style__content__rating">
-                            <svg width="22" height="21" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.865 1.81533C17.5103 -0.373737 14.0083 0.0200132 11.847 2.45283L11.0005 3.40439L10.154 2.45283C7.99701 0.0200132 
-                                4.49076 -0.373737 2.13607 1.81533C-0.562363 4.32783 -0.704161 8.8372 1.71068 11.5606L10.0251 20.9263C10.5622 21.531 11.4345 
-                                21.531 11.9716 20.9263L20.2861 11.5606C22.7052 8.8372 22.5634 4.32783 19.865 1.81533Z" fill="url(#paint0_linear_52876_656)"
-                                />
-                            </svg>              
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <section class="footer__sec">
-        <h2 class="footer__title">ohmyfood</h2>
-            <div  class="footer__sec__links">
-                <span class="footer__sec__links-span">
-                    <a href="#">
-                        <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.49736 0.385973C5.51851 0.505308 5.92308 2.78538 5.92308 3.65628C5.92308 4.9842 5.18798 5.93127 4.1012 6.31213L4.44231 
-                            12.3576C4.46082 12.7055 4.1726 13 3.80769 13H2.11538C1.75313 13 1.46226 12.708 1.48077 12.3576L1.82188 6.31213C0.732452 5.93127 0 4.98166 
-                            0 3.65628C0 2.78284 0.404567 0.505308 0.425721 0.385973C0.510337 -0.129456 1.62356 -0.137073 1.69231 0.413902V3.99905C1.72668 4.08538 2.09159
-                            4.0803 2.11538 3.99905C2.1524 3.35667 2.32428 0.464683 2.32692 0.398668C2.41418 -0.129456 3.50889 -0.129456 3.59351 0.398668C3.5988 0.467223 
-                            3.76803 3.35667 3.80505 3.99905C3.82885 4.0803 4.19639 4.08538 4.22813 3.99905V0.413902C4.29688 -0.134534 5.41274 -0.129456 5.49736 
-                            0.385973ZM8.64928 7.64005L8.25264 12.3398C8.22091 12.6953 8.51442 13 8.88462 13H10.3654C10.7171 13 11 12.7283 11 12.3906V0.60941C11 
-                            0.274254 10.7171 3.62896e-05 10.3654 3.62896e-05C8.18389 3.62896e-05 4.51106 4.53225 8.64928 7.64005Z" fill="white"/>
-                        </svg>
-                        Proposer un restaurant
-                    </a>
-                </span>
-                <span class="footer__sec__links-span">
-                    <a href="#">
-                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.08765 4.87486H6.2572V6.29686C6.2572 7.30495 5.65573 8.12514 4.91646 8.12514C4.1772 8.12514 3.57573 7.30495 3.57573 
-                            6.29686V3.2091L2.3672 4.19941C2.00781 4.49143 1.78808 5.02214 1.78808 5.59094V6.79202L0.298367 7.96516C0.0134597 8.18862 -0.0852336
-                            8.68632 0.0804966 9.07483L1.57021 12.5943C1.73407 12.9828 2.09905 13.1148 2.38396 12.8914L4.30941 11.3754H6.85309C7.51042 11.3754
-                            8.04485 10.6466 8.04485 9.75027H8.3428C8.67239 9.75027 8.93868 9.38716 8.93868 8.93771V7.31257H9.08765C9.33531 7.31257 9.53456
-                            7.04087 9.53456 6.70314V5.48429C9.53456 5.14656 9.33531 4.87486 9.08765 4.87486ZM11.838 3.92517L10.3483 0.405735C10.1844 0.0172256
-                                9.81947 -0.114817 9.53456 0.10864L7.60911 1.62459H5.70601C5.48255 1.62459 5.26468 1.71092 5.07475 1.8709L4.45093 2.40161C4.27589 
-                                2.54888 4.17161 2.81043 4.17161 3.08975V6.29686C4.17161 6.85804 4.50493 7.31257 4.91646 7.31257C5.328 7.31257 5.66132 6.85804 5.66132
-                                6.29686V4.06229H9.08765C9.66305 4.06229 10.1304 4.69965 10.1304 5.48429V6.20798L11.6202 5.03484C11.9051 4.80884 12.0019 4.31368 11.838
-                                3.92517Z" fill="white"/>
-                        </svg>
-                        Devenir partenaire
-                    </a>
-                </span>
-                <span class="footer__sec__links-span"><a href="#">Mentions légales</a></span>
-                <span class="footer__sec__links-span"><a href="mailto:contact@ohmyfood.fr">Contact</a></span>
-            </div>
-        </section>
-    </footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ohmyfood</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" type="text/css" href="../css/var.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/loader.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/footer.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="loader">
+			<div class="loader__dot d1"></div>
+			<div class="loader__dot d2"></div>
+			<div class="loader__dot d3"></div>
+		</div>
+		<header class="header">
+			<h1 class="header__title">ohmy<span class="header__title-bold">food</span></h1>
+		</header>
+		<main>
+			<div class="header__location">
+				<span class="header__location__pin">
+					<svg width="12" height="16" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 4.4C9 7.7 4.5 11 4.5 11C4.5 11 0 7.7 0 4.4C0 3.23305 0.474106 2.11389 1.31802 1.28873C2.16193 0.46357 3.30653 0 4.5 0C5.69347 0 6.83807 0.46357 7.68198 1.28873C8.52589 2.11389 9 3.23305 9 4.4Z" fill="white" />
+						<path d="M4.5 6.05C5.43198 6.05 6.1875 5.31127 6.1875 4.4C6.1875 3.48873 5.43198 2.75 4.5 2.75C3.56802 2.75 2.8125 3.48873 2.8125 4.4C2.8125 5.31127 3.56802 6.05 4.5 6.05Z" fill="#202020" />
+					</svg>
+				</span>
+				<span class="header__location__text">Paris, Belleville</span>
+			</div>
+			<section class="homepage__header">
+				<div class="header__container">
+					<h2>Réservez le menu qui vous convient</h2>
+					<p class="header__container__subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+				</div>
+				<div class="homepage__header__btn">
+					<a href="#">Explorer nos restaurants</a>
+				</div>
+			</section>
+			<section class="function">
+				<h2>Fonctionnement</h2>
+				<div class="function__cards">
+					<div class="function__card__style choose">
+						<p class="function__card__style__number__container">
+							<span class="function__card__style__number__container--txt">1</span>
+						</p>
+						<span class="function__card__style__icon">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.3335 1.33333H4.66683C3.93045 1.33333 3.3335 1.93028 3.3335 2.66666V13.3333C3.3335 14.0697 3.93045 14.6667 4.66683 14.6667H11.3335C12.0699 14.6667 12.6668 14.0697 12.6668 13.3333V2.66666C12.6668 1.93028 12.0699 1.33333 11.3335 1.33333Z" />
+								<path d="M8 12H8.00813" />
+							</svg>
+						</span>
+						<span class="function__card__style__text">Choisissez un restaurant</span>
+					</div>
+					<div class="function__card__style compose">
+						<p class="function__card__style__number__container">
+							<span class="function__card__style__number__container--txt">2</span>
+						</p>
+						<span class="function__card__style__icon">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.3335 4H14.0002" />
+								<path d="M5.3335 8H14.0002" />
+								<path d="M5.3335 12H14.0002" />
+								<path d="M2 4H2.00667" />
+								<path d="M2 8H2.00667" />
+								<path d="M2 12H2.00667" />
+							</svg>
+						</span>
+						<span class="function__card__style__text">Composez votre menu</span>
+					</div>
+					<div class="function__card__style savour">
+						<p class="function__card__style__number__container">
+							<span class="function__card__style__number__container--txt">3</span>
+						</p>
+						<span class="function__card__style__icon">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 1.33334V6.00001C2 6.73334 2.6 7.33334 3.33333 7.33334H6C6.35362 7.33334 6.69276 7.19287 6.94281 6.94282C7.19286 6.69277 7.33333 6.35363 7.33333 6.00001V1.33334" />
+								<path d="M4.6665 1.33334V14.6667" />
+								<path d="M13.9998 10V1.33334C13.1158 1.33334 12.2679 1.68453 11.6428 2.30965C11.0177 2.93478 10.6665 3.78262 10.6665 4.66668V8.66668C10.6665 9.40001 11.2665 10 11.9998 10H13.9998ZM13.9998 10V14.6667" />
+							</svg>
+						</span>
+						<span class="function__card__style__text">Dégustez au restaurant</span>
+					</div>
+				</div>
+			</section>
+			<section class="restaurants">
+				<h2>Restaurants</h2>
+				<div class="restaurants__cards">
+					<article class="restaurants__cards__style">
+						<a href="html/palette.html">Lien</a>
+						<p class="restaurants__cards__style__new">Nouveau</p>
+						<img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" />
+						<div class="restaurants__cards__style__content">
+							<div class="restaurants__cards__style__content__txt">
+								<h3>La palette du goût</h3>
+								<p>Ménilmontant</p>
+							</div>
+							<div class="restaurants__cards__style__content__rating">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.6668 9.33333C13.6602 8.36 14.6668 7.19333 14.6668 5.66667C14.6668 4.69421 14.2805 3.76158 13.5929 3.07394C12.9053 2.38631 11.9726 2 11.0002 2C9.82683 2 9.00016 2.33333 8.00016 3.33333C7.00016 2.33333 6.1735 2 5.00016 2C4.0277 2 3.09507 2.38631 2.40744 3.07394C1.7198 3.76158 1.3335 4.69421 1.3335 5.66667C1.3335 7.2 2.3335 8.36667 3.3335 9.33333L8.00016 14L12.6668 9.33333Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+					</article>
+					<article class="restaurants__cards__style">
+						<a href="html/note.html">Lien</a>
+						<p class="restaurants__cards__style__new">Nouveau</p>
+						<img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" />
+						<div class="restaurants__cards__style__content">
+							<div class="restaurants__cards__style__content__txt">
+								<h3>La note enchantée</h3>
+								<p>Charonne</p>
+							</div>
+							<div class="restaurants__cards__style__content__rating">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.6668 9.33333C13.6602 8.36 14.6668 7.19333 14.6668 5.66667C14.6668 4.69421 14.2805 3.76158 13.5929 3.07394C12.9053 2.38631 11.9726 2 11.0002 2C9.82683 2 9.00016 2.33333 8.00016 3.33333C7.00016 2.33333 6.1735 2 5.00016 2C4.0277 2 3.09507 2.38631 2.40744 3.07394C1.7198 3.76158 1.3335 4.69421 1.3335 5.66667C1.3335 7.2 2.3335 8.36667 3.3335 9.33333L8.00016 14L12.6668 9.33333Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+					</article>
+					<article class="restaurants__cards__style">
+						<a href="html/francaise.html">Lien</a>
+						<img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" />
+						<div class="restaurants__cards__style__content">
+							<div class="restaurants__cards__style__content__txt">
+								<h3>À la française</h3>
+								<p>Cité Rouge</p>
+							</div>
+							<div class="restaurants__cards__style__content__rating">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.6668 9.33333C13.6602 8.36 14.6668 7.19333 14.6668 5.66667C14.6668 4.69421 14.2805 3.76158 13.5929 3.07394C12.9053 2.38631 11.9726 2 11.0002 2C9.82683 2 9.00016 2.33333 8.00016 3.33333C7.00016 2.33333 6.1735 2 5.00016 2C4.0277 2 3.09507 2.38631 2.40744 3.07394C1.7198 3.76158 1.3335 4.69421 1.3335 5.66667C1.3335 7.2 2.3335 8.36667 3.3335 9.33333L8.00016 14L12.6668 9.33333Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+					</article>
+					<article class="restaurants__cards__style">
+						<a href="html/delice.html">Lien</a>
+						<img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" />
+						<div class="restaurants__cards__style__content">
+							<div class="restaurants__cards__style__content__txt">
+								<h3>Le délice des sens</h3>
+								<p>Folie-Méricourt</p>
+							</div>
+							<div class="restaurants__cards__style__content__rating">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.6668 9.33333C13.6602 8.36 14.6668 7.19333 14.6668 5.66667C14.6668 4.69421 14.2805 3.76158 13.5929 3.07394C12.9053 2.38631 11.9726 2 11.0002 2C9.82683 2 9.00016 2.33333 8.00016 3.33333C7.00016 2.33333 6.1735 2 5.00016 2C4.0277 2 3.09507 2.38631 2.40744 3.07394C1.7198 3.76158 1.3335 4.69421 1.3335 5.66667C1.3335 7.2 2.3335 8.36667 3.3335 9.33333L8.00016 14L12.6668 9.33333Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<section class="footer__sec">
+				<h2 class="footer__title">ohmy<span>food</span></h2>
+				<div class="footer__sec__links">
+					<span class="footer__sec__links-span">
+						<a href="#">
+							<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M8.50007 10.5C8.63268 10.5 8.75986 10.4473 8.85363 10.3535C8.94739 10.2597 9.00007 10.1326 9.00007 9.99995V7.32495C9.00007 7.09645 9.15807 6.90295 9.36357 6.80445C9.78906 6.60148 10.1292 6.25473 10.3239 5.8254C10.5186 5.39607 10.5554 4.91175 10.4278 4.45793C10.3002 4.00411 10.0164 3.60996 9.62641 3.34503C9.23648 3.0801 8.76549 2.96142 8.29657 3.00995C8.10345 2.56106 7.78301 2.1786 7.37486 1.90987C6.96671 1.64114 6.48875 1.49792 6.00007 1.49792C5.5114 1.49792 5.03344 1.64114 4.62529 1.90987C4.21713 2.1786 3.89669 2.56106 3.70357 3.00995C3.23486 2.96176 2.76419 3.0806 2.37454 3.34552C1.98489 3.61044 1.70128 4.00442 1.57371 4.458C1.44615 4.91159 1.48283 5.39564 1.67727 5.82483C1.87172 6.25401 2.21145 6.60077 2.63657 6.80395C2.84207 6.90295 3.00007 7.09645 3.00007 7.32445V9.99995C3.00007 10.1326 3.05275 10.2597 3.14652 10.3535C3.24029 10.4473 3.36746 10.5 3.50007 10.5H8.50007Z" />
+								<path d="M3 8.5H9" />
+							</svg>
+
+							Proposer un restaurant
+						</a>
+					</span>
+					<span class="footer__sec__links-span">
+						<a href="#">
+							<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.5 8.5L6.5 9.5C6.59849 9.59849 6.71542 9.67662 6.8441 9.72992C6.97279 9.78323 7.11071 9.81066 7.25 9.81066C7.38929 9.81066 7.52721 9.78323 7.6559 9.72992C7.78458 9.67662 7.90151 9.59849 8 9.5C8.09849 9.40151 8.17662 9.28458 8.22992 9.1559C8.28323 9.02721 8.31066 8.88929 8.31066 8.75C8.31066 8.61071 8.28323 8.47279 8.22992 8.3441C8.17662 8.21542 8.09849 8.09849 8 8" />
+								<path
+									d="M7.00011 7.00001L8.25011 8.25001C8.44903 8.44892 8.71881 8.56067 9.00011 8.56067C9.28142 8.56067 9.5512 8.44892 9.75011 8.25001C9.94903 8.0511 10.0608 7.78131 10.0608 7.50001C10.0608 7.2187 9.94903 6.94892 9.75011 6.75001L7.81011 4.81001C7.52886 4.52911 7.14761 4.37133 6.75011 4.37133C6.35261 4.37133 5.97136 4.52911 5.69011 4.81001L5.25011 5.25001C5.0512 5.44892 4.78142 5.56067 4.50011 5.56067C4.21881 5.56067 3.94903 5.44892 3.75011 5.25001C3.5512 5.0511 3.43945 4.78131 3.43945 4.50001C3.43945 4.2187 3.5512 3.94892 3.75011 3.75001L5.15511 2.34501C5.61123 1.89008 6.20606 1.60028 6.84543 1.52149C7.48481 1.4427 8.1322 1.57942 8.68511 1.91001L8.92011 2.05001C9.13301 2.1785 9.38614 2.22307 9.63011 2.17501L10.5001 2.00001" />
+								<path d="M10.5 1.5L11 7H10" />
+								<path d="M1.5 1.5L1 7L4.25 10.25C4.44891 10.4489 4.7187 10.5607 5 10.5607C5.2813 10.5607 5.55109 10.4489 5.75 10.25C5.94891 10.0511 6.06066 9.78131 6.06066 9.5C6.06066 9.2187 5.94891 8.94891 5.75 8.75" />
+								<path d="M1.5 2H5.5" />
+							</svg>
+							Devenir partenaire
+						</a>
+					</span>
+					<span class="footer__sec__links-span"><a href="#">Mentions légales</a></span>
+					<span class="footer__sec__links-span"><a href="mailto:contact@ohmyfood.fr">Contact</a></span>
+				</div>
+			</section>
+		</footer>
+	</body>
 </html>

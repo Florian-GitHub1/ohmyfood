@@ -1,42 +1,40 @@
-@import "../css/mixin.scss";
-
+@import '../css/mixin.scss';
 
 // Fichier Sass dédier au loader.
 
 @include loader;
 
-.loader{
-    position: fixed;
-    background-color: #ffffffb2;
-    backdrop-filter: blur(10px);
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: loaderend 2s forwards 3s alternate;
-    z-index: 3;
-        &__dot{
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            margin: 0px -5px;
-            animation: loader 700ms infinite 1s alternate;
-            border: 1px solid rgba(0, 0, 0, 0.431372549);
-            box-shadow: inset 8px -10px 4px 0px rgba(0, 0, 0, 0.15);
-        }
-        & .d1{
-            background-color: #99E2D0;
-            animation-delay: 0.15s;
-        }
-        & .d2{
-            background-color: #FF79DA;
-            animation-delay:  0.30s;
-        }
-        & .d3{
-            background-color: #9880ff;
-            animation-delay:  0.40s;
-        }
-}
-
+// .loader{
+//     position: fixed;
+//     background-color: #ffffffb2;
+//     backdrop-filter: blur(10px);
+//     width: 100%;
+//     height: 100%;
+//     inset: 0;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     animation: loaderend 2s forwards 3s alternate;
+//     z-index: 3;
+//         &__dot{
+//             width: 45px;
+//             height: 45px;
+//             border-radius: 50%;
+//             margin: 0px -5px;
+//             animation: loader 700ms infinite 1s alternate;
+//             border: 1px solid rgba(0, 0, 0, 0.431372549);
+//             box-shadow: inset 8px -10px 4px 0px rgba(0, 0, 0, 0.15);
+//         }
+//         & .d1{
+//             background-color: #99E2D0;
+//             animation-delay: 0.15s;
+//         }
+//         & .d2{
+//             background-color: #FF79DA;
+//             animation-delay:  0.30s;
+//         }
+//         & .d3{
+//             background-color: #9880ff;
+//             animation-delay:  0.40s;
+//         }
+// }

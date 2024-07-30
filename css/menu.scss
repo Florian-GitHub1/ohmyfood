@@ -1,208 +1,203 @@
-@import "../css/mixin.scss";
+@import '../css/mixin.scss';
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background: #FFFFFF;
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #ffffff;
 }
 
-
-.header{
-    background-color: #FFFFFF;
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    &__title{
-        text-align: center;
-        font-family: 'Shrikhand', sans-serif;
-        font-weight: 400;
-        font-size: 30px;
-        padding: 10px 0 8px;
-    }
-    &__arrow{
-        display: flex;
-        align-items: center;
-        padding-left: 25px;
-    }
+.header {
+	background-color: #ffffff;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	&__title {
+		text-align: center;
+		font-family: 'Fraunces', sans-serif;
+		font-weight: 200;
+		font-size: 30px;
+		padding: 10px 0 8px;
+		&-bold {
+			font-weight: 200;
+		}
+	}
+	&__arrow {
+		display: flex;
+		align-items: center;
+		padding-left: 25px;
+	}
 }
 
-.restaurant{
-    &__img{
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
+.restaurant {
+	&__img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+	}
 }
 
 @include animationheart;
-@include btn__anim;
 
-.carte{
-    position: relative;
-    background-color: #F6F6F6;
-    max-width: 1044px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    &__title{
-        display: flex;
-        position: absolute;
-        background-color: #F6F6F6;
-        border-radius: 40px 40px 0px 0px;
-        top: -49px;
-        width: 100%;
-        align-items: center;
-        padding: 42px 16px 0px 10px; 
-            & h2{
-                font-family: 'Shrikhand', sans-serif;
-                font-weight: 400;
-                font-size: 26px;
-                margin-left: 2px;
-            }
-            & svg{
-                margin: 0px 0px 7px 5%;
-                fill-opacity: 0;
-                stroke: #000000;
-                cursor: pointer;
-            }
-            & svg:hover{
-                animation: heart .9s forwards;
-            }
-        }
-    &__button{
-        display: flex;
-        justify-content: center;
-        opacity: 0;
-        animation: btn__appear 1s forwards 1.5s linear;
-            & button{
-                @include btn__style;
-                border: none;
-                font-weight: 500;
-                font-size: 16px;
-                padding: 15px 45px 15px 45px;
-                margin: 40px;
-            }
-            & button:hover{
-                animation: btn__anim .25s forwards linear;
-            }
-    }
+.carte {
+	position: relative;
+	background-color: #f6f6f6;
+	max-width: 1044px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	&__title {
+		display: flex;
+		position: absolute;
+		background-color: #f6f6f6;
+		border-radius: 40px 40px 0px 0px;
+		top: -49px;
+		width: 100%;
+		align-items: center;
+		padding: 42px 16px 0px 10px;
+		& h2 {
+			font-family: 'Shrikhand', sans-serif;
+			font-weight: 400;
+			font-size: 26px;
+			margin-left: 2px;
+		}
+		& svg {
+			margin: 0px 0px 7px 5%;
+			fill-opacity: 0;
+			stroke: #000000;
+			cursor: pointer;
+		}
+		& svg:hover {
+			animation: heart 0.9s forwards;
+		}
+	}
+	&__button {
+		display: flex;
+		justify-content: center;
+		opacity: 0;
+		animation: btn__appear 1s forwards 1.5s linear;
+		& button {
+			@include btn__style;
+			border: none;
+			font-weight: 500;
+			font-size: 16px;
+			padding: 15px 45px 15px 45px;
+			margin: 40px;
+			cursor: pointer;
+		}
+		& button:hover {
+			@include btn__anim;
+		}
+	}
 }
-
-
 
 @include menu__anim;
 @include checked__rotate;
 
-.menu--margin{
-    margin-top: 35px;
+.menu--margin {
+	margin-top: 35px;
 }
-.menu{
-    padding: 30px 8px 0px 8px;
-    opacity: 0;
-    &__title{
-        padding-bottom: 3px;
-        border-bottom: 3px solid #99E2D0;
-        width: 30px;
-        text-transform: uppercase;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-    }
-    & .menu-card{
-        display: flex;
-        width: 100%;
-        margin: 10px 0px;
-        padding: 0;
-        background-color: #FFFFFF;
-        font-family: 'Roboto', sans-serif;
-        border-radius: 15px;
-        box-shadow: 0px 5px 8px rgb(213 213 213 / 35%);;
-        overflow: hidden;
-        cursor: pointer;
-        &__info{
-            display: flex;
-            width: 100%;
-            margin: 5px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        &__description{
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 100%;
-            padding: 5px;
-                & h3{
-                    margin: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis; 
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 18px; 
-                }
-                & p{
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 15.0431px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-        }
-        &__price{
-            display: flex;
-            align-items: flex-end;
-            width: 15%;
-            padding: 5px;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 15.0431px;
-            justify-content: flex-end;
-        }
-        &__checkout{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto;
-            width: 75px;
-            margin-right: -75px;
-            border-radius: 0px 15px 15px 0px;
-            background-color: #99e2d0;
-            transition: margin-right 0.9s ease-in-out;
-        }
-    }     
-}
-
-.menu-card:hover .menu-card__checkout{
-    margin-right: 0px;
-        & svg{
-            animation: rotate_center 0.9s reverse ease-in-out;
-        }
+.menu {
+	padding: 30px 8px 0px 8px;
+	opacity: 0;
+	&__title {
+		padding-bottom: 3px;
+		border-bottom: 3px solid #99e2d0;
+		width: 30px;
+		text-transform: uppercase;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+	}
+	& .menu-card {
+		display: flex;
+		width: 100%;
+		margin: 10px 0px;
+		padding: 0;
+		background-color: #ffffff;
+		font-family: 'Roboto', sans-serif;
+		border-radius: 15px;
+		box-shadow: 0px 5px 8px rgb(213 213 213 / 35%);
+		overflow: hidden;
+		cursor: pointer;
+		&__info {
+			display: flex;
+			width: 100%;
+			margin: 5px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		&__description {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 100%;
+			padding: 5px;
+			& h3 {
+				margin: 0;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 18px;
+			}
+			& p {
+				font-style: normal;
+				font-weight: 300;
+				font-size: 15.0431px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+		&__price {
+			display: flex;
+			align-items: flex-end;
+			width: 15%;
+			padding: 5px;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 15.0431px;
+			justify-content: flex-end;
+		}
+		&__checkout {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: auto;
+			width: 75px;
+			margin-right: -75px;
+			border-radius: 0px 15px 15px 0px;
+			background-color: #99e2d0;
+			transition: margin-right 0.9s ease-in-out;
+		}
+	}
 }
 
-
-
-
-
-
-@media screen and (min-width: 767.8px){
-    .carte{
-        align-items: center;
-    }
-    .menu{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-        align-items: center;
-        width: 65%;
-    }
+.menu-card:hover .menu-card__checkout {
+	margin-right: 0px;
+	& svg {
+		animation: rotate_center 0.9s reverse ease-in-out;
+	}
 }
 
-@media screen and (min-width: 425px){
-    .carte{
-            &__title{
-                justify-content: center;
-            }
-    }
+@media screen and (min-width: 767.8px) {
+	.carte {
+		align-items: center;
+	}
+	.menu {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		justify-content: center;
+		align-items: center;
+		width: 65%;
+	}
+}
+
+@media screen and (min-width: 425px) {
+	.carte {
+		&__title {
+			justify-content: center;
+		}
+	}
 }
