@@ -1,74 +1,85 @@
 @import '../css/mixin.scss';
 
 body {
-	font-family: 'Roboto', sans-serif;
-	background: #ffffff;
-}
-
-.header {
-	background-color: #ffffff;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-	&__title {
-		text-align: center;
-		font-family: 'Fraunces', sans-serif;
-		font-weight: 200;
-		font-size: 30px;
-		padding: 10px 0 8px;
-		&-bold {
-			font-weight: 200;
-		}
-	}
-	&__arrow {
-		display: flex;
-		align-items: center;
-		padding-left: 25px;
-	}
+	font-family: 'Opensauce_light', sans-serif;
+	color: var(--txt-color);
+	min-height: 100vh;
 }
 
 .restaurant {
+	position: relative;
+	max-height: 500px;
+	margin: 0px 16px 0px 16px;
+	min-height: 250px;
+	max-height: 250px;
 	&__img {
 		width: 100%;
-		height: 300px;
+		height: 100%;
 		object-fit: cover;
+		object-position: 0 60%;
+		border-radius: 12px;
+		min-height: 250px;
+		max-height: 250px;
+	}
+	&__title {
+		position: absolute;
+		z-index: 2;
+		color: var(--txt-light);
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding: 16px;
+		&-wrapper {
+			h2 {
+				font-weight: 100;
+				font-size: 20px;
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+
+		& svg {
+			cursor: pointer;
+			@include heart__style;
+			width: 16px;
+			height: 16px;
+			transition: transform 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8), fill-opacity 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
+		}
+		& svg:hover {
+			transform: scale(1.2);
+			fill-opacity: 1;
+		}
+	}
+	&__gradient {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		border-radius: 12px;
+		height: 100%;
+		width: 100%;
+	}
+	& .red {
+		background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(91 9 11 / 60%) 120%);
+	}
+	& .yellow {
+		background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(200 91 32 / 70%) 120%);
+	}
+	& .green {
+		background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(39 52 34 / 60%) 120%);
+	}
+	& .light-green {
+		background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(84 134 102 / 60%) 120%);
 	}
 }
 
-@include animationheart;
-
 .carte {
-	position: relative;
-	background-color: #f6f6f6;
-	max-width: 1044px;
-	margin: auto;
+	margin: 0 16px 0 16px;
 	display: flex;
 	flex-direction: column;
-	&__title {
-		display: flex;
-		position: absolute;
-		background-color: #f6f6f6;
-		border-radius: 40px 40px 0px 0px;
-		top: -49px;
-		width: 100%;
-		align-items: center;
-		padding: 42px 16px 0px 10px;
-		& h2 {
-			font-family: 'Shrikhand', sans-serif;
-			font-weight: 400;
-			font-size: 26px;
-			margin-left: 2px;
-		}
-		& svg {
-			margin: 0px 0px 7px 5%;
-			fill-opacity: 0;
-			stroke: #000000;
-			cursor: pointer;
-		}
-		& svg:hover {
-			animation: heart 0.9s forwards;
-		}
-	}
 	&__button {
 		display: flex;
 		justify-content: center;
@@ -92,17 +103,14 @@ body {
 @include menu__anim;
 @include checked__rotate;
 
-.menu--margin {
-	margin-top: 35px;
-}
 .menu {
-	padding: 30px 8px 0px 8px;
+	margin: 32px 0px 0px 0px;
 	opacity: 0;
 	&__title {
-		padding-bottom: 3px;
-		border-bottom: 3px solid #99e2d0;
-		width: 30px;
-		text-transform: uppercase;
+		padding-bottom: 2px;
+		margin-bottom: 12px;
+		border-bottom: 2px solid var(--bg-accent-color);
+		width: 34px;
 		font-style: normal;
 		font-weight: 300;
 		font-size: 16px;
@@ -110,18 +118,20 @@ body {
 	& .menu-card {
 		display: flex;
 		width: 100%;
-		margin: 10px 0px;
+		margin-bottom: 8px;
 		padding: 0;
-		background-color: #ffffff;
-		font-family: 'Roboto', sans-serif;
-		border-radius: 15px;
-		box-shadow: 0px 5px 8px rgb(213 213 213 / 35%);
+		background-color: var(--bg-dark);
+		color: var(--txt-light);
+		border-radius: 12px;
 		overflow: hidden;
 		cursor: pointer;
+		&:nth-last-child(1) {
+			margin-bottom: 0;
+		}
 		&__info {
 			display: flex;
 			width: 100%;
-			margin: 5px;
+			margin: 8px 6px;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -131,20 +141,20 @@ body {
 			overflow: hidden;
 			text-overflow: ellipsis;
 			width: 100%;
-			padding: 5px;
+			padding: 8px 6px;
 			& h3 {
-				margin: 0;
+				margin-bottom: 1px;
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
+				font-family: 'Opensauce_regular';
 				font-style: normal;
-				font-weight: 500;
-				font-size: 18px;
+				font-weight: 300;
+				font-size: 16px;
 			}
 			& p {
 				font-style: normal;
-				font-weight: 300;
-				font-size: 15.0431px;
+				font-size: 14px;
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -156,8 +166,7 @@ body {
 			width: 15%;
 			padding: 5px;
 			font-style: normal;
-			font-weight: 700;
-			font-size: 15.0431px;
+			font-size: 14px;
 			justify-content: flex-end;
 		}
 		&__checkout {
@@ -167,9 +176,11 @@ body {
 			height: auto;
 			width: 75px;
 			margin-right: -75px;
-			border-radius: 0px 15px 15px 0px;
-			background-color: #99e2d0;
-			transition: margin-right 0.9s ease-in-out;
+			background-color: var(--bg-accent-color);
+			transition: margin-right 0.8s ease-in-out;
+			& svg {
+				fill: var(--bg-dark);
+			}
 		}
 	}
 }
@@ -177,20 +188,40 @@ body {
 .menu-card:hover .menu-card__checkout {
 	margin-right: 0px;
 	& svg {
-		animation: rotate_center 0.9s reverse ease-in-out;
+		animation: rotate_center 0.8s reverse ease-in-out;
 	}
 }
 
-@media screen and (min-width: 767.8px) {
+@media screen and (min-width: 1024px) {
+	body {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+	}
+	.restaurant {
+		margin: 0 32px 0 32px;
+		max-height: 500px;
+		max-width: 100%;
+		&__img {
+			max-width: 100%;
+			max-height: 500px;
+			min-height: 500px;
+		}
+	}
 	.carte {
-		align-items: center;
+		display: grid;
+		margin: 6vh 32px 8vh 32px;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: start;
+		grid-column-gap: 20px;
+		&__button {
+			grid-area: 5 / 2 / 6 / 3;
+		}
 	}
 	.menu {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		justify-content: center;
 		align-items: center;
-		width: 65%;
 	}
 }
 
@@ -199,5 +230,12 @@ body {
 		&__title {
 			justify-content: center;
 		}
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 767.8px) {
+	.carte {
+		margin: auto;
+		max-width: 740px;
 	}
 }

@@ -1,0 +1,32 @@
+.header {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.header__title {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 400;
+  padding: 13px 0;
+  margin-right: 16px;
+}
+.header__title-bold {
+  font-family: "FrauncesItal", serif;
+  font-weight: 900;
+}
+.header__arrow {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+@media screen and (min-width: 767.8px) {
+  .header__title {
+    margin-right: 32px;
+  }
+  .header__arrow {
+    margin-left: 32px;
+  }
+}/*# sourceMappingURL=header.css.map */
